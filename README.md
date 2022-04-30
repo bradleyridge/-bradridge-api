@@ -13,7 +13,7 @@ The API is a koa webserver with a few endpoints to empower CRUD operations on bl
 - [x] `babel-node` in order to use module syntax
 - [x] hot-reload (`nodemon`)
 - [x] webserver (`koa-compose`) *with one mock endpoint*
-- [ ] install postgresql locally
+- [x] install postgresql locally
 - [ ] blog post feature
     - [ ] `post` migration, model, & seed data
     - [ ] CRUD endpoints
@@ -24,6 +24,14 @@ The API is a koa webserver with a few endpoints to empower CRUD operations on bl
     - [ ] `tag_assignment` (polymorphic) migration, model, & seed data
     - [ ] C__D endpoints
     - [ ] update post endpoints to return related tags
+
+## Local Development
+
+### Database Setup
+
+Install postgres locally (`brew install postgresql`).
+
+Run postgres locally (`brew services start postgresql`).
 
 ### Troubleshooting
 

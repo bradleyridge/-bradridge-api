@@ -1,5 +1,5 @@
 import compose from 'koa-compose';
 
-import getPost from './getPost';
+import getById from './getById';
 
-export default compose([getPost]);
+export default compose([getById]);

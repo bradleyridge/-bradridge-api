@@ -14,8 +14,8 @@ The API is a koa webserver with a few endpoints to empower CRUD operations on bl
 - [x] hot-reload (`nodemon`)
 - [x] webserver (`koa-compose`) *with one mock endpoint*
 - [x] install postgresql locally
-- [ ] blog post feature
-    - [ ] `post` migration, model, & seed data
+- [x] blog post feature
+    - [x] `post` migration, model, & seed data
     - [ ] CRUD endpoints
 - [ ] tag management feature
     - [ ] `tag` database migration, model, & seed data

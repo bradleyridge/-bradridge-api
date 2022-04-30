@@ -9,9 +9,11 @@
     "dev": "nodemon --exec env-cmd babel-node index.js",
     "dev:migrate": "env-cmd npm run migrate",
     "dev:migrate-undo": "env-cmd npm run migrate-undo",
+    "dev:seed": "env-cmd npm run seed",
     "migrate": "knex migrate:up",
     "migrate-undo": "knex migrate:down",
     "migrate:make": "knex migrate:make",
+    "seed": "./node_modules/.bin/babel-node ./node_modules/.bin/knex seed:run",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -30,6 +32,8 @@
     "@babel/preset-env": "^7.17.10",
     "12factor-config": "^2.0.0",
     "babel-plugin-add-module-exports": "^1.0.4",
+    "bookshelf": "^1.2.0",
+    "bookshelf-uuid": "^1.0.1",
     "env-cmd": "^10.1.0",
     "knex": "^2.0.0",
     "koa": "^2.13.4",
@@ -37,7 +41,8 @@
     "koa-compose": "^4.1.0",
     "koa-logger": "^3.2.1",
     "koa-route": "^3.2.0",
-    "pg": "^8.7.3"
+    "pg": "^8.7.3",
+    "validator": "^13.7.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.16"

@@ -11,7 +11,7 @@ The API is a koa webserver with a few endpoints to empower CRUD operations on bl
 - [x] environment & variables (`env-cmd`, `12factor-config`)
 - [x] `.editorconfig`
 - [x] `babel-node` in order to use module syntax
-- [ ] hot-reload (`nodemon`)
+- [x] hot-reload (`nodemon`)
 - [ ] webserver (`koa-compose`) *with one mock endpoint*
 - [ ] blog post feature
     - [ ] `post` migration, model, & seed data
@@ -23,3 +23,9 @@ The API is a koa webserver with a few endpoints to empower CRUD operations on bl
     - [ ] `tag_assignment` (polymorphic) migration, model, & seed data
     - [ ] C__D endpoints
     - [ ] update post endpoints to return related tags
+
+### Troubleshooting
+
+`EADRINUSE - Address Already In Use`
+
+> Run `lsof -i :<port number>` and then `kill -9 <process_id>` to terminate any process using that port.

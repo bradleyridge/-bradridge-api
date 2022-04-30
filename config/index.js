@@ -4,14 +4,11 @@ module.exports = config({
   nodeEnv: {
     env: 'NODE_ENV',
     type: 'string',
-    required: false, // default
-    default: 'develop', // default value if not in .env
-    values: ['development', 'staging', 'production'], // allowed values
+    default: 'development', // default value if not in .env
   },
   host: {
     env: 'HOST',
     type: 'string',
-    required: false,
     default: 'localhost',
     // values: ['localhost', 'api.bradridge.dev'],
   },

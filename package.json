@@ -1,0 +1,23 @@
+{
+  "name": "bradridge-api",
+  "version": "1.0.0",
+  "description": "API and database model for core demo site",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bradleyridge/2022-node-demo-api.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bradleyridge/2022-node-demo-api/issues"
+  },
+  "homepage": "https://github.com/bradleyridge/2022-node-demo-api#readme",
+  "dependencies": {
+    "12factor-config": "^2.0.0",
+    "env-cmd": "^10.1.0"
+  }
+}

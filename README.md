@@ -10,7 +10,7 @@ The API is a koa webserver with a few endpoints to empower CRUD operations on bl
 
 - [x] environment & variables (`env-cmd`, `12factor-config`)
 - [x] `.editorconfig`
-- [ ] `babel-node` in order to use module syntax
+- [x] `babel-node` in order to use module syntax
 - [ ] hot-reload (`nodemon`)
 - [ ] webserver (`koa-compose`) *with one mock endpoint*
 - [ ] blog post feature

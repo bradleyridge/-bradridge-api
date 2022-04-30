@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "dev": "env-cmd node index.js",
+    "dev": "env-cmd babel-node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,7 +19,11 @@
   },
   "homepage": "https://github.com/bradleyridge/2022-node-demo-api#readme",
   "dependencies": {
+    "@babel/core": "^7.17.10",
+    "@babel/node": "^7.17.10",
+    "@babel/preset-env": "^7.17.10",
     "12factor-config": "^2.0.0",
+    "babel-plugin-add-module-exports": "^1.0.4",
     "env-cmd": "^10.1.0"
   }
 }

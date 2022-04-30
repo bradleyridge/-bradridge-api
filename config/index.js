@@ -1,6 +1,6 @@
 const config = require('12factor-config');
 
-module.exports = config({
+export default config({
   nodeEnv: {
     env: 'NODE_ENV',
     type: 'string',
@@ -9,8 +9,7 @@ module.exports = config({
   host: {
     env: 'HOST',
     type: 'string',
-    default: 'localhost',
-    // values: ['localhost', 'api.bradridge.dev'],
+    default: 'http://localhost',
   },
   port: {
     env: 'PORT',

@@ -16,6 +16,7 @@ export const handle = async (ctx, id) => {
     if (!post) {
         ctx.status = STATUS_CODES.NOT_FOUND;
         ctx.message = `"Post" record with id "${id}" not found.`;
+        return ctx;
     }
 
     ctx.body = post.toJSON();

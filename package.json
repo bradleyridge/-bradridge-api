@@ -4,7 +4,7 @@
   "description": "API and database model for core demo site",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "node build/",
     "init:db": "bash ./bin/setupDb.sh",
     "dev": "nodemon --exec env-cmd babel-node index.js",
     "dev:migrate": "env-cmd npm run migrate",

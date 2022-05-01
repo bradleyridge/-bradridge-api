@@ -14,7 +14,8 @@
     "migrate-undo": "knex migrate:down",
     "migrate:make": "knex migrate:make",
     "seed": "./node_modules/.bin/babel-node ./node_modules/.bin/knex seed:run",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel ./ -d build --only ./lib,./config,./routes,./index.js,./app.js,./knexfile.js"
   },
   "repository": {
     "type": "git",
@@ -27,6 +28,7 @@
   },
   "homepage": "https://github.com/bradleyridge/2022-node-demo-api#readme",
   "dependencies": {
+    "@babel/cli": "^7.17.10",
     "@babel/core": "^7.17.10",
     "@babel/node": "^7.17.10",
     "@babel/preset-env": "^7.17.10",

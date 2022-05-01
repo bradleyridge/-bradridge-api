@@ -8,17 +8,17 @@ export const httpMethod = HTTP_METHODS.GET;
 export const handle = async (ctx, id) => {
 
     // validate url parameter is UUID
-    if (!validator.isUUID(id)) {
-        ctx.status = STATUS_CODES.EXPECTATION_FAILED;
-        ctx.message = `URL parameter "${id}" is not of type UUID.`
-        return ctx;
-    }
+    const { errors } = Post.validate({ id }, { errorOnRequired: false });
+    if (errors.length > 0) ctx.throw(STATUS_CODES.EXPECTATION_FAILED, `Failed to validate state: ${errors.join(', ')}`);
     
-    ctx.body = await Post.getById(id);
+    const post = await Post.getById(id);
 
-    if (!ctx.body) {
+    if (!post) {
         ctx.status = STATUS_CODES.NOT_FOUND;
         ctx.message = `"Post" record with id "${id}" not found.`;
     }
+
+    ctx.body = post.toJSON();
+    ctx.STATUS_CODES = STATUS_CODES.OK;
     return ctx;
 };

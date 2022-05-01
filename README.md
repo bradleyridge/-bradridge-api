@@ -16,7 +16,7 @@ The API is a koa webserver with a few endpoints to empower CRUD operations on bl
 - [x] install postgresql locally
 - [x] blog post feature
     - [x] `post` migration, model, & seed data
-    - [ ] CRUD endpoints
+    - [x] CRUD endpoints
 - [ ] tag management feature
     - [ ] `tag` database migration, model, & seed data
     - [ ] CR_D endpoints

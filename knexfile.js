@@ -10,11 +10,11 @@ module.exports = {
     seeds: { directory: './lib/database/seeds/development' },
   },
   production: {
-    client: 'postgresql',
+    client: 'pg',
     // connection: `${process.env.DATABASE_URL}?ssl=true`,
     connection: {
       ...parse(process.env.DATABASE_URL),
-      rejectUnauthorized: false,
+      ssl: { rejectUnauthorized: false },
     },
     searchPath: process.env.DATABASE_SCHEMA || 'public',
     migrations: { directory: './lib/database/migrations' },

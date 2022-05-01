@@ -1,5 +1,7 @@
-import compose from 'koa-compose';
+import * as getById from './getById';
+import * as create from './create';
 
-import getById from './getById';
-
-export default compose([getById]);
+export default [
+    create,
+    getById,
+];

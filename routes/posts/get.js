@@ -7,11 +7,11 @@ import * as Post from '../../lib/database/models/Post';
 export const routePath = '/posts';
 export const httpMethod = HTTP_METHODS.GET;
 export const handle = async (ctx) => {
-
-    // get pagination
-    const pagination = getPagination(ctx);
     
-    const posts = await Post.get({}, { pagination });
+    const posts = await Post.get({}, {
+        pagination: getPagination(ctx),
+        withRelated: ['tag_assignments.tag']
+    });
 
     if (!posts) {
         ctx.status = STATUS_CODES.NOT_FOUND;

@@ -8,6 +8,9 @@ export const handle = async (ctx) => {
     const { errors, state } = Tag.validate(ctx.request.body || {});
     if (errors.length > 0) ctx.throw(STATUS_CODES.EXPECTATION_FAILED, `Failed to validate state: ${errors.join(', ')}`);
 
+    const matchingTags = await Tag.get({ name: state.name });
+    if (matchingTags.length > 0) ctx.throw(STATUS_CODES.EXPECTATION_FAILED, `Tag with name "${state.name}" already exists`);
+
     const tag = await Tag.create(state);
 
     if (!tag) {

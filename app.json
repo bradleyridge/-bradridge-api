@@ -1,0 +1,10 @@
+{
+    "keywords": ["node", "koa"],
+    "formation": {
+        "web": {
+            "quantity": 1,
+            "size": "hobby"
+        }
+    },
+    "buildpacks": [{ "url": "heroku/nodejs" }]
+}

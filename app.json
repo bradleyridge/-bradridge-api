@@ -6,5 +6,8 @@
             "size": "hobby"
         }
     },
-    "buildpacks": [{ "url": "heroku/nodejs" }]
+    "buildpacks": [{ "url": "heroku/nodejs" }],
+    "scripts": {
+        "postdeploy": "npm run migrate"
+    }
 }

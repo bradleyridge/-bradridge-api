@@ -3,9 +3,11 @@ import bodyParser from 'koa-bodyparser';
 
 // routes
 import posts from './posts';
+import tags from './tags';
 
 const routeDefinitions = [
     ...posts,
+    ...tags,
 ];
 console.log(`Building ${routeDefinitions.length} routes:`);
 

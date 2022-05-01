@@ -10,7 +10,7 @@
     "dev:migrate": "env-cmd npm run migrate",
     "dev:migrate-undo": "env-cmd npm run migrate-undo",
     "dev:seed": "env-cmd npm run seed",
-    "migrate": "knex migrate:up",
+    "migrate": "knex migrate:latest",
     "migrate-undo": "knex migrate:down",
     "migrate:make": "knex migrate:make",
     "seed": "./node_modules/.bin/babel-node ./node_modules/.bin/knex seed:run",

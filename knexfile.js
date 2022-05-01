@@ -8,10 +8,7 @@ module.exports = {
   },
   production: {
     client: 'postgresql',
-    connection: {
-      connectionString: `${process.env.DATABASE_URL}?ssl=true`,
-      ssl: { rejectUnauthorized: false },
-    },
+    connection: `${process.env.DATABASE_URL}?ssl=true`,
     searchPath: process.env.DATABASE_SCHEMA || 'public',
     migrations: { directory: './lib/database/migrations' },
     seeds: { directory: './lib/database/seeds/production' },
